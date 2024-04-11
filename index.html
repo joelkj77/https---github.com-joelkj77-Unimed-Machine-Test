@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unimed Machine Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-<hash>" crossorigin="anonymous" />
+
+</head>
+<body>
+    <header>
+     
+            <nav>
+                <div class="logo">
+                    <img src="./images/unimed-logo.svg" alt="">
+                </div>
+                <div class="nav-right-section">
+                    <ul>
+                        <li><a href="#"><img src="./images/navbar-in_img.svg" alt=""></a></li>
+                        <li><a href="#"><img src="images/navbar-x_img.svg" alt=""></a></li>
+                        <li><a href="#"><img src="images/navbar-instagram_img.svg" alt=""></a></li>
+                        <li><a href="#" class="btn light">CONTACT US</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" onclick="toggleMenu()">DIVISIONS <span><img src="images/dropdown-arrow_img.png" alt=""></span></a>
+                            <ul id="dropdown-menu" >
+                                <li><a href="#">PHARMACY</a><span>></span></li>
+                                <li><a href="#">MEDICAL </a><span>></span></li>
+                                <li><a href="#">HEALTHCARE </a><span>></span></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">PARTNERS</a></li>
+                        <li><a href="#">PRODUCTS</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">MEDIA</a></li>
+                        <li><span class="search-box-desktop"><input type="text" placeholder="Search here..."></span><span id="searchIcon-desktop"><img src="images/search-icon.svg" alt=""></span>
+                         
+                        </li>
+    
+                    </ul>
+                </div>
+            </nav>
+            <nav class="mobile-nav">
+                <div class="logo">
+                    <img src="./images/unimed-logo.svg" alt="">
+                </div>
+                <div class="icons">
+                    <i class="uil uil-search search-icon" id="searchIcon" ></i>
+                    <div class="search-box">
+                        <i class="uil uil-search search-icon"></i>
+                        <input type="text" placeholder="Search here..."/>
+                    </div>
+                    <img class="menu-icon" src="./images/menu-icon-mobile-view.svg" alt="">
+                </div>
+            </nav>
+            <div class="mobile-menu-container">
+                <div class="close-icon">
+                    <img src="./images/close-icon.svg" alt="">
+                </div>
+                <ul>
+                    <li><a href="#">DIVISIONS</a></li>
+                    <li><a href="#">PARTNERS</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">MEDIA</a></li>
+                    <li><a href="#" class="btn light">CONTACT US</a></li>
+
+                </ul>
+            </div>
+<!-- end of mobile navigation -->
+       
+    </header>
+    <section class="hero-section">
+        <div class="bg-color-overlay"></div>
+        <div class="wrapper">
+            <div class="content">
+                <h2>MedShop</h2>
+                <p class="one-stop">One-Stop Destination for Medical Essentials and Wellness Solutions</p>
+                <p class="lorem mobile-view">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec velit.</p>
+            </div>
+        </div>
+    </section>
+    <div class="services">
+        <section class="services-section">
+            <div class="left">
+                <img class="hand-holding_bg_img" src="images/hand-holding_bg_img.svg" alt="">
+                <img class="hand-holding_img" src="images/hand-holding_img.png" alt="">
+            </div>
+            <div class="mobile-view-left">
+                <img class="hand-holding_bg_img" src="images/mobile-nav-handholding_bg_img.svg" alt="">
+                <img class="hand-holding_img" src="images/mobile-nav-handholding_img.png" alt="">
+            </div>
+            <div class="right">
+                <h2>Find All The<span> Health Essentials Here</span></h2>
+                <div class="cards">
+                    <div class="box">
+                        <div class="image">
+                            <img src="./images/medical-equipment.svg" alt="">
+                        </div>
+                        
+                        <div class="content">
+                            <p>Medical Equipment</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="./images/physiotherapy-products.svg" alt="">
+                        </div>
+                        
+                        <div class="content">
+                            <p>Physiotherapy Products</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="./images/homecare-devices.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Homecare Devices</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="./images/general-healthcare-products.svg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <p>General Healthcare Products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="medshop-section">
+        <div class="wrapper">
+            <div class="container">
+                <div class="left">
+                    <h2>Medshop <span>AHD</span></h2>
+                    <p class="lorem mobile-view">Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi consequat est nisl</p>
+                    <p class="sec-para mobile-view">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consequat est nisl, nec consequat urna pulvinar eget. Praesent sit amet pellentesque neque. Integer ac sollicitudin sem. Donec accumsan libero et nulla malesuada rhoncus. Praesent blandit tincidunt nisi id vehicula. Mauris semper luctus dolor a dapibus.</p>
+                    <p class="lorem tab-view">Lorem ipsum dolor sit amet</p>
+                    <p class="medsop-pharmacy">Medshop Pharmacy, your trusted health partner, offers convenience,<br/> expert guidance, and personalized service for your well-being.</p>
+                    <div class="location">
+                        <img src="images/map-pin.svg" alt="">
+                        <div class="right-section">
+                            <p><b>Staywell Pharmacy</b> <br/>789 Oasis Street, Dubai Health District, Lorem Emirates, PO Box 12345, Dubai</p>
+                            <a href="#" class="btn dark">Find us On Map <span>&#8594;</span></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="right">
+                    <img class="medshop-right-img" src="./images/medshop-right_img.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="medshop-img-section tab-view">
+        <img src="./images/medsho-images-1.png" alt="">
+        <img src="./images/medshop-images-2.png" alt="">
+        <img src="./images/medshop-images-3.png" alt="">
+        <img src="./images/medshop-images-4.png" alt="">
+    </section>
+    <section class="medshop-img-section mobile-view">
+        <img src="./images/mobile-view-medshop-images-1.png" alt="">
+        <img src="./images/mobile-view-medshop-images-2.png" alt="">
+        <img src="./images/mobile-view-medshop-images-3.png" alt="">
+        <img src="./images/mobile-view-medshop-images-4.png" alt="">
+    </section>
+    <section class="discount-products-section">
+        <img class="mobile-view-product-discount_img" src="./images/mobile-view-product-discount_right_img.png" alt="">
+        <div class="product-section-wrapper">
+<img class="left-bg" src="./images/product-discount-left_bg.svg" alt="">
+        <img class="left-mobile-view-bg" src="images/mobile-view-product-discount_left_img.svg" alt="">
+        <img class="right-bg" src="./images/products-discount-right_img_bg.svg" alt="">
+        <img class="right-mobile-view-bg" src="images/mobile-view-product-discount_right_bg_img.svg" alt="">
+
+        <div class="wrapper">
+            <div class="content">
+                <h2>Exclusive <span>Discounts</span> on Essential <span>Wellness</span> Products</h2>
+                <img class="discount-products_img" src="./images/discount-products_img.png" alt="">
+                
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>
+        
+        <div class="footer-tab-view-bg-img"><img src="images/footer-bg_img.svg" alt=""></div>
+        <div class="footer-mobile-view-bg-img"><img src="images/mobile-view-unimed-footer_bg_img.svg" alt=""></div>
+
+        <div class="wrapper">
+            <div class="info">
+                <div class="logo">
+                    <img class="tab-view-logo" src="/images/unimed-logo-footer.png" alt="">
+                    <img class="mobile-view-logo" src="images/mobile-view-unimed-footer-logo_img.svg" alt="">
+                </div>
+                <ul>
+                    <li><a href="#">PHARMA</a></li>
+                    <li><a href="#">MEDICAL</a></li>
+                    <li><a href="#">CONSUMER</a></li>
+                    <li><a href="#">HEALTHCARE RETAIL</a></li>
+                </ul>
+            </div>
+            <div class="links-container tab-view">
+                <div class="links">
+                    <h3>Get In Touch</h3>
+                    <ul>
+                        <li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi augue dolor, finibus a efficitur ut, mattis ac nisi.</p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/images/mail.svg" alt=""><span>info@unimed.com</span></a>
+                            <a href="#"><img src="/images/phone-call.svg" alt=""><span>+971 8945213979</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>
+                            <a href="#">Partners </a>
+                        </li>
+                        <li>
+                            <a href="#">Products</a>
+                        </li>
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">UMD standards</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h3></h3>
+                    <ul>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Media</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact us</a>
+                        </li>      
+                    </ul>
+                </div>
+            </div>
+            <div class="links-container mobile-view">
+                <div class="links">
+                    <h3>Get In Touch</h3>
+                    <ul>
+                        <li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi augue dolor, finibus a efficitur ut, mattis ac nisi.</p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/images/mail.svg" alt=""><span>info@unimed.com</span></a>
+                            <a href="#"><img src="/images/phone-call.svg" alt=""><span>+971 8945213979</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <div class="quick-links">
+                        <h3>Quick Links</h3><span onclick="toggleDropdown()"><img src="images/mobile-view-dropdown-icon_img.svg" alt=""></span>
+                    </div>
+                   <div class="site-navigation" id="links-dropdown">
+                    <ul>
+                        <li>
+                            <a href="#">Partners </a>
+                        </li>
+                        <li>
+                            <a href="#">Products</a>
+                        </li>
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">UMD standards</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Media</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact us</a>
+                        </li>      
+                    </ul>
+                   </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright 2024 © Unimed. All Rights Reserved.</p>
+                <div class="social">
+                    <p>Follow us on</p>
+                    <ul>
+                        <li><img src="images/linkedin.svg" alt=""></li>
+                        <li><img src="images/x-icon.svg" alt=""></li>
+                        <li><img src="images/instagram-icon.svg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
