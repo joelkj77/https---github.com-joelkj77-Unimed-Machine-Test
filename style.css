@@ -392,12 +392,48 @@ align-items: center;
 .medshop-section .container .left .location a span{
     margin-left: 17.5px;
 }
-.medshop-img-section {
+.medshop-img-section{
+    position: relative;
+    overflow: hidden;
+}
+.medshop-img-section ul {
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    list-style: none;
+    width: calc(400px *8);
     overflow-x: auto;
     cursor: pointer;
+    animation: scroll 40s linear infinite;
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-400px *4));
+    }
+}
+.medshop-img-section ul:hover{
+    animation-play-state: paused;
+}
+.medshop-img-section::before, .medshop-img-section::after {
+    background: linear-gradient(to right, rgba(255,255,255,1)0%,rgba(255,255,255,0)100% );
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+.medshop-img-section::before{
+    left: 0;
+    top: 0;
+}
+.medshop-img-section::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
 }
 .medshop-img-section img{
     transition: 0.5s ease;
@@ -405,7 +441,7 @@ align-items: center;
 .medshop-img-section img:hover{
     transform: scale(1.1);
 }
-.medshop-img-section::-webkit-scrollbar{
+.medshop-img-section ul::-webkit-scrollbar{
     width: 0;
     height: 0;
 }
@@ -730,6 +766,17 @@ footer .footer-mobile-view-bg-img{
     .medshop-img-section img{
         width: 350px;
     }
+    .medshop-img-section ul {
+        width: calc(350px *8);
+    }
+    @keyframes scroll{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-350px *4));
+        }
+    }
     footer {
         margin-top: 100px;
     }
@@ -1009,18 +1056,65 @@ footer .footer-mobile-view-bg-img{
     .medshop-section .container .right{
         display: none;
     }
-
+    
     .medshop-img-section.mobile-view{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 76px 0 74px 0;
+    background: #fff;
+    z-index: 1;
+    }
+
+   
+    .medshop-img-section.mobile-view ul{
+        position: relative;
         display: flex;
         justify-content: space-between;
         gap: 16px;
+        list-style: none;
+        width: calc(365px *8);
         overflow-x: auto;
         cursor: pointer;
-        padding: 76px 0 74px 20px;
-        background: #fff;
-        position: relative;
-        z-index: 1;
-
+        animation: scroll 10s linear infinite;
+    }
+    @keyframes scroll{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-365px *4));
+        }
+    }
+    .medshop-img-section.mobile-view ul:hover{
+        animation-play-state: paused;
+    }
+    .medshop-img-section.mobile-view::before, .medshop-img-section.mobile-view::after {
+        background: linear-gradient(to right, rgba(255,255,255,1)0%,rgba(255,255,255,0)100% );
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 15%;
+        z-index: 2;
+    }
+    .medshop-img-section.mobile-view::before{
+        left: 0;
+        top: 0;
+    }
+    .medshop-img-section.mobile-view::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+    .medshop-img-section.mobile-view img{
+        transition: 0.5s ease;
+    }
+    .medshop-img-section.mobile-view img:hover{
+        transform: scale(1.1);
+    }
+    .medshop-img-section.mobile-view ul::-webkit-scrollbar{
+        width: 0;
+        height: 0;
     }
     .discount-products-section {
         height: 524px;
