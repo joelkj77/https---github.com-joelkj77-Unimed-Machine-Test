@@ -55,20 +55,22 @@ const scrollRevealOption = {
     origin: "bottom",
     duration:1000,
 };
-
+document.addEventListener('DOMContentLoaded', function() {
 ScrollReveal().reveal(".hand-holding_img",{
     ...scrollRevealOption,
     interval:500,
+});
 });
 
 ScrollReveal().reveal(".hand-holding_bg_img",{
     ...scrollRevealOption,
     interval:500,
 });
-
+document.addEventListener('DOMContentLoaded', function() {
 ScrollReveal().reveal(".medshop-right-img",{
     ...scrollRevealOption,
     interval:500,
+});
 });
 ScrollReveal().reveal(".discount-products_img",{
     ...scrollRevealOption,

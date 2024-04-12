@@ -11,11 +11,21 @@
     margin: 0;
    box-sizing: border-box; 
 }
-
+h1, h2, h3, h4, h5, h6, p, ul, .col-lg-6, .col-md-6 {
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    padding: 0;
+}
+.row{
+    margin: 0;
+}
 body{
     margin: 0;
     font-family: "Frutiger";
     font-style: normal; 
+    line-height: unset;
     font-weight: 400; 
 }
 .wrapper{
@@ -26,7 +36,7 @@ body{
 section{
     margin-top: 130px;
 }
-.btn{
+.button{
     padding: 14px 31px;
     border-radius: 20px;
     color: #fff;
@@ -37,16 +47,16 @@ section{
     position: relative;
     text-decoration: none;
 }
-.btn.dark{
+.button.dark{
     background: var(--dark-blue-color);
 }
-.btn.dark:hover{
+.button.dark:hover{
     box-shadow: 0 0 0.5rem var(--dark-blue-color);
 }
-.btn.light{
+.button.light{
     background: var(--light-green-color);
 }
-.btn.light:hover{
+.button.light:hover{
     box-shadow: 0 0 0.5rem var(--light-green-color);
 }
 
@@ -236,55 +246,59 @@ nav ul li:last-child{
 }
 .services{
     position: relative;
+}
+.services .container-fluid{
     width: 100%;
     padding: 0 120px;
 }
-.services-section{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-   
+.services .align-items-center {
+    align-items: center !important;
 }
-.services-section .left{
-    height: 493px;
-}
-.services-section .left .hand-holding_bg_img{
+
+.services-section .col-lg-6 .hand-holding_bg_img{
     position: absolute;
     bottom: 75px;
     left: 0;
 }
-.services-section .left .hand-holding_img{
+.services-section .col-lg-6  .hand-holding_img{
     z-index: 1;
     position: relative;
 }
-.services-section .right {
-    width: 100%;
-    max-width: 588px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.services-section .right h2{
+
+.services h2 {
     font-size: 60px;
     line-height: 70px;
     font-weight: 400;
     color: var(--dark-blue-color);
 }
-.services-section .right h2 span{
-    color:var(--light-green-color);
+
+.services h2 span {
+    color: var(--light-green-color);
 }
-.services-section .right .cards{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
+.services .cards .row {
     margin-top: 20px;
 }
-.services-section .right .cards .box{
-    width: 282px;
-    height: 114px;
+.services .cards .row .first-row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0;
+    gap: 4px;
+}
+.services .cards .row .second-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    gap: 4px;
+    margin-top: 24px;
+}
+
+.services .cards .box {
+    height: 114px;
+    width: 100%;
+    max-width: 282px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0 0 20px;
     gap: 30px;
     align-items: center;
     background: #fff;
@@ -292,32 +306,33 @@ nav ul li:last-child{
     border-radius: 16px;
     position: relative;
 }
-.services-section .right .cards .box:hover{
+
+.services .cards .box:hover {
     border-color: #E2E2E2;
     transition: 0.4s all ease;
     transform: scale(1.1);
     cursor: pointer;
 }
-.services-section .right .cards .box .image{
-    width: 67px;
+
+.services .cards .box .image {
+    width: 100%;
+    max-width: 67px;
     height: 67px;
     background-color: var(--dark-blue-color);
     border-radius: 50%;
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-}
-.services-section .right .cards .box:nth-child(2) .image {
- background-color: var(--light-green-color);
-}
-.services-section .right .cards .box:nth-child(3) .image {
+.services .cards .first-row .col-md-6:nth-child(2) .box .image {
     background-color: var(--light-green-color);
-   }
-.services-section .right .cards .box .content{
-    width: 134px;
 }
-.services-section .right .cards .box .content p{
+.services .cards .second-row .col-md-6:nth-child(1) .box .image {
+    background-color: var(--light-green-color);
+}
+
+.services .cards .box .content p {
     color: #464646;
     font-size: 20px;
     font-weight: normal;
@@ -328,7 +343,7 @@ align-items: center;
     align-items: center;
     background: #F3F3F3;
 }
-.medshop-section .container{
+.medshop-section .container-fluid{
     position: relative;
     width: 100%;
     padding: 130px 0;
@@ -337,25 +352,25 @@ align-items: center;
     align-items: center;
     justify-content: space-between;
 }
-.medshop-section .container .left h2{
+.medshop-section .container-fluid .left h2{
     font-size: 60px;
     line-height: 70px;
     font-weight: 400;
     color: var(--dark-blue-color);
 
 }
-.medshop-section .container .left h2 span{
+.medshop-section .container-fluid .left h2 span{
     color: var(--light-green-color);
 
 }
-.medshop-section .container .left .lorem{
+.medshop-section .container-fluid .left .lorem{
     font-size: 20px;
     line-height: 25px;
     font-weight: 400;
     color: #464646;
     margin-top: 24px;
 }
-.medshop-section .container .left .medsop-pharmacy{
+.medshop-section .container-fluid .left .medsop-pharmacy{
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.32px;
@@ -363,18 +378,18 @@ align-items: center;
     margin-top: 32px;
     color: #464646;
 }
-.medshop-section .container .left .location{
+.medshop-section .container-fluid .left .location{
     display: flex;
     justify-content: flex-start;
     gap: 25.55px;
     margin-top: 60px;
 }
-.medshop-section .container .left .location img{
+.medshop-section .container-fluid .left .location img{
     height: 28.67px;
     position: relative;
     top: 5px;
 }
-.medshop-section .container .left .location p{
+.medshop-section .container-fluid .left .location p{
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -383,13 +398,13 @@ align-items: center;
     max-width: 304px;
     color: #464646;
 }
-.medshop-section .container .left .location a{
+.medshop-section .container-fluid .left .location a{
     font-size: 16px;
     margin-top: 30px;
     font-family: "Frutiger";
     color:var(--light-green-color);
 }
-.medshop-section .container .left .location a span{
+.medshop-section .container-fluid .left .location a span{
     margin-left: 17.5px;
 }
 .medshop-img-section{
@@ -675,35 +690,51 @@ footer .footer-mobile-view-bg-img{
     display: none;
  }
 
- @media(max-width:1370px){
+
+@media(max-width:1330px){
     nav{
         padding: 19px 80px 27px 80px;
     }
     .wrapper {
        padding: 0 50px;
     }
-    .services{
-        padding: 0 50px;
+    .services .align-items-center {
+        display: flex;
+        flex-direction: column;
     }
-    .services-section {
-        gap: 20px;
+    .services-section .col-lg-6 .hand-holding_bg_img {
+        position: absolute;
+        width: 60%;
+        top: -130px;
     }
-    .services-section .right h2 {
-        font-size: 50px;
-        line-height: 60px;
-    }
-    .services-section .right .cards .box {
+    .col-lg-6.left{
+        display: flex;
+        justify-content: center;
+        margin: auto;
         width: 100%;
     }
-    .services-section .right .cards .box .content {
-        width: 100%;
-        max-width: 250px;
+    .col-lg-6.right{
+        margin: auto;
+        width: 80%;
+        margin-top: 40px;
     }
-    .services-section .left .hand-holding_bg_img {
-        bottom: 320px;
-    width: 565px;
+    .services h2 {
+        text-align: center;
+    }
+    .services .cards .row .first-row {
+        gap: 24px;
+    }
+    .services .cards .row .second-row {
+        gap: 24px;
+    }
+    .services .cards .box {
+        height: 114px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px 0 20px;
     }
 }
+
 @media (max-width:1110px){
     section{
         margin-top: 100px;
@@ -715,34 +746,18 @@ footer .footer-mobile-view-bg-img{
         font-size: 54px;
         line-height: 63px;
     }
-    .services-section {
-        gap: 45px;
-        flex-direction: column;
+    .services-section .col-lg-6 .hand-holding_bg_img {
+        top: -100px;
     }
-    .services-section .left {
-        margin: auto;
-    
-    }
-    .services-section .left .hand-holding_bg_img {
-        bottom: 715px;
-        width: 100%;
-        max-width: 700px;
-    }
-    .services-section .right {
-        margin: auto;
-    }
-    .services-section .right h2 {
-        text-align: center;
-    }
-    .medshop-section .container .left  {
+    .medshop-section .container-fluid .left  {
         margin: auto;
         padding-left: 100px;
     }
-    .medshop-section .container .left h2 {
+    .medshop-section .container-fluid .left h2 {
         font-size: 50px;
         line-height: 60px;
     }
-    .medshop-section .container .right  {
+    .medshop-section .container-fluid .right  {
         display: none;
     }
     .discount-products-section .content {
@@ -759,7 +774,7 @@ footer .footer-mobile-view-bg-img{
         top: 180px;
         width: 410px;
     }
-    .medshop-section .container {
+    .medshop-section .container-fluid {
      
         padding: 80px 0;
     }
@@ -784,6 +799,8 @@ footer .footer-mobile-view-bg-img{
         gap: 30px;
     }
 }
+
+
 
 @media(max-width:950px){
     section {
@@ -959,84 +976,39 @@ footer .footer-mobile-view-bg-img{
         font-size: 16px;
         line-height: 24px;
     }
-    .mobile-view-left {
-        margin: auto;
-    }
-    .services {
-        padding: 0 20px;
-    }
     .services-section {
-        display: flex;
-        gap: 45px;
-        flex-direction: column;
-        padding: 89px 0 72px 0;
+        padding-top: 89px;
+        padding-bottom: 72px;
     }
-    .services-section .right .cards {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 100%;
-    }
-    .services-section .right .cards .box{
-        width: 100%;
-        justify-content: flex-start;
-        gap: 16px;
-        height: 105px;
-    padding-left: 20px;
-    }
-    .services-section .right .cards .box:nth-child(1) {
-        order: 1;
-    }
-    .services-section .right .cards .box:nth-child(2) {
-        order: 2;
-    } .services-section .right .cards .box:nth-child(3) {
-        order: 4;
-    } .services-section .right .cards .box:nth-child(4) {
-        order: 3;
-    }
-    .services-section .right .cards .box .content {
-        width: auto;
-    }
-    .services-section .right h2 {
-        font-size: 40px;
-        text-align: left;
-        line-height: 46px;
-    }
-    .services-section .left{
-        display: none;
-    }
-
-    .mobile-view-left {
-        display: block;
-        position: relative;
-    }
-    .services-section .mobile-view-left .hand-holding_bg_img{
-        position: absolute;
-        bottom: 50px;
-    left: -80px;
-    }
-    .services-section .mobile-view-left .hand-holding_img{
-        z-index: 1;
-        position: relative;
     
+    .services .col-lg-6.left {
+        margin-top: 0px;
     }
-    .medshop-section .container{
+    .services .col-lg-6.right {
+        margin: auto;
+        width: 100%;
+        margin-top: 40px;
+    }
+    .services-section .col-lg-6 .hand-holding_bg_img {
+        top: 0px;
+    }
+    .medshop-section .container-fluid{
         padding: 73px 0 75px 0;
     }
-    .medshop-section .container .left {
+    .medshop-section .container-fluid .left {
         padding-left: 0;
     }
-    .medshop-section .container .left h2{
+    .medshop-section .container-fluid .left h2{
         font-size: 40px;
         line-height: 46px;
         padding: 0 80px 0 0;
     }
-    .medshop-section .container .left .lorem.mobile-view{
+    .medshop-section .container-fluid .left .lorem.mobile-view{
         display: block;
         font-size: 18px;
         margin-top: 20px;
     }
-    .medshop-section .container .left .sec-para.mobile-view{
+    .medshop-section .container-fluid .left .sec-para.mobile-view{
         display: block;
         letter-spacing: 0.32px;
         color: #464646;
@@ -1044,16 +1016,16 @@ footer .footer-mobile-view-bg-img{
         line-height: 24px;
         margin-top: 19px;
     }
-    .medshop-section .container .left .location {
+    .medshop-section .container-fluid .left .location {
         margin-top: 54px;
     }
-    .medshop-section .container .left .location a {
+    .medshop-section .container-fluid .left .location a {
         margin-top: 33px;
     }
-    .medshop-section .container .left .location p {
+    .medshop-section .container-fluid .left .location p {
         padding:  0 10px 0 0;
     }
-    .medshop-section .container .right{
+    .medshop-section .container-fluid .right{
         display: none;
     }
     
@@ -1076,7 +1048,7 @@ footer .footer-mobile-view-bg-img{
         width: calc(365px *8);
         overflow-x: auto;
         cursor: pointer;
-        animation: scroll 10s linear infinite;
+        animation: scroll 40s linear infinite;
     }
     @keyframes scroll{
         0%{
@@ -1247,6 +1219,12 @@ footer .footer-mobile-view-bg-img{
     }
 
 }
+@media(max-width:768px) {
+    .services .col-md-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
 @media (max-width:680px) {
     nav .search-box{
         top: calc((100% + 5px));
@@ -1256,7 +1234,48 @@ footer .footer-mobile-view-bg-img{
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 }
-@media(max-width:450px) {
+@media(max-width:768px){
+    .services h2 {
+        text-align: left;
+        font-size: 50px;
+    line-height: 56px;
+    }
+    .services-section .col-lg-6 .hand-holding_bg_img {
+        bottom: 725px;
+    }
+    .services .cards .row .first-row {
+        flex-direction: column;
+        width: 100%;
+    }
+    .services .cards .row .second-row {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .services .cards .box {
+        justify-content: flex-start;
+    }
+}
+
+
+@media(max-width:590px) {
+    .services .container-fluid {
+        padding: 0 20px;
+    }
+    .services-section .col-lg-6 .hand-holding_bg_img {
+        width: 100%;
+        top: 0px;
+        left: -40px;
+    }
+    .services h2 {
+        text-align: left;
+        font-size: 40px;
+    line-height: 46px;
+    }
+    .services .cards .box {
+        height: 105px;
+        gap: 22px;
+    }
+   
     .discount-products-section .content .discount-products_img{
         display: none;
     }
